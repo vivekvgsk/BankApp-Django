@@ -1,0 +1,29 @@
+{%extends 'index.html'%}
+{%block body_block%}
+<!--home page-->
+<!--<a href="{%url 'balance'%}">Balance Enquiry</a>-->
+<!--<a href="">Fund Transfer</a>-->
+<!--<a href="">Payment History</a>-->
+<!--<a href="">Logout</a>-->
+<br><br><br>
+<div class="card"style="width:350px;margin-left;2550px">
+  <h5 class="card-header" style="background-color:#229af0;color:white">Account Balance</h5>
+  <div class="card-body">
+      {%if account_number%}
+      <h6 class="card-title"><strong>Account Number:</strong>&nbsp;&nbsp;&nbsp;&nbsp;{{account_number}}</h6>
+      {%endif%}
+      {%if balance%}
+      <h6 class="card-title"><strong>Account Balance:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{balance}}</h6>
+      <h6 class="card-title"><strong>Available Balance:</strong>&nbsp;&nbsp;&nbsp;&nbsp;{{balance}}</h6>
+{%endif%}
+  </div>
+</div>
+
+
+
+<div>
+
+    <h2></h2>
+
+</div>
+{% endblock %}

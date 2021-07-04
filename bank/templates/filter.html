@@ -1,0 +1,56 @@
+{%extends 'index.html'%}
+{%block body_block%}
+<br><br>
+<div class="card" style="width:450px">
+    <h5 class="card-header" style="background-color:#229af0;color:white;font-weight:bold;"><center>Please fill anyof the fields</center></h5>
+  <div class="card-body">
+    <form action="" method="get">
+
+        <table>
+            {{filter.form.as_table}}
+        </table>
+
+    <input type="submit" value="Search" class="btn btn-success">
+
+</form>
+</div>
+</div>
+<br>
+<div class="container">
+    <div class="row">
+        <div>
+            <div class="card">
+                <h5 class="card-header" style="background-color:#229af0;color:white;font-weight:bold">Transactions</h5>
+                <div class="card-body">
+                    <table class="table table-striped ">
+                        <tr class="bg-warning">
+                            <td>Remitter Account Number</td>
+                            <td>Beneficiary Account Number</td>
+                            <td>Date</td>
+                            <td>Amount</td>
+                        </tr>
+                        {%for transaction in filter.qs%}
+                        <tr>
+                            <td>{{transaction.from_account_number}}</td>
+                            <td>{{transaction.to_account_number}}</td>
+                            <td>{{transaction.date}}</td>
+                            <td>{{transaction.amount}}</td>
+                        </tr>
+                        {%endfor%}
+                    </table>
+                </div>
+            </div>
+        </div>
+ </div>
+        </div>
+{%endblock%}
+<!--<form action="" method="get">-->
+    <!--{{filter.form.as_p}}-->
+    <!--<input type="submit" value="filter">-->
+<!--</form>-->
+<!--{%for transaction in filter.qs%}-->
+<!--{{transaction.from_account_number}}-->
+<!--{{transaction.to_account_number}}-->
+<!--{{transaction.date}}-->
+<!--{{transaction.amount}}-->
+<!--{%endfor%}-->

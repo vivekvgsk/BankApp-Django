@@ -1,0 +1,58 @@
+body{
+    background-size: 75%;
+    background-repeat: no-repeat;
+}
+
+
+
+#logo{
+    height: 75px;
+}
+#underline{
+    background-color: rgb(223, 107, 41);
+    height: 10px;
+}
+#loginbtn{
+
+    margin-left: 100px;
+}
+#logo2{
+    height:70px;
+margin-left: 100px;
+
+}
+ #loghead{
+
+     margin-left: 80px;
+     color: rgb(100, 7, 221);
+     font-weight: bolder;
+ }
+
+
+ #amttransferbody{
+     background-image: url(images/image\(1\).jpg);
+     background-size: 75%;
+     background-repeat: no-repeat;
+
+ }
+
+
+ }
+
+
+ }
+
+
+ #logout{
+     margin-left: 250px;
+ }
+ .nav-link{
+
+     font-weight: bolder;
+
+ }
+ marquee{
+     margin-left: 250px;
+     color: rgb(243, 14, 14);
+     font-style: italic;
+ }

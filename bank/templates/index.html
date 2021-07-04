@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+ <link href="{%static 'css/styles.css'%}" rel="stylesheet"/>
+
+
+</head>
+
+<body style="background-image:url(/static/images/bg.jpg);background-size: 75%;background-repeat: no-repeat;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="height:90px">
+        <div class="container-fluid" id="logo">
+            <a class="navbar-brand" href="#"><img src="/static/images/logo.png" alt="" style="height:90px ;width:450px"></a>
+            <nav class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{%url 'transactions'%}">Fund Transfer</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="{%url 'balance'%}"> Balance Enquiry</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link active" href="{%url 'paymenthistory'%}">Payment History</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="{%url 'filter'%}">Filter Transactions</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">Loans</a>
+                  </li>
+                    <li class="nav-item">
+                    <a class="nav-link active btn btn-danger" href="{%url 'signout'%}">Logout</a>
+                  <!--<button type="submit" class="btn btn-primary" a href="{%url 'signout'%}">Log Out</button>-->
+
+                </ul>
+            </nav>
+
+        </div>
+
+
+        </nav>
+    <div class="row" style="height:10px;background-color:#9c2121">
+
+        </div>
+ <div class="container-fluid" >
+     <div class="row">
+         <div class="col-4"></div>
+         <div class="col-6">
+          {%block body_block%}
+
+
+
+
+            {%endblock%}
+         </div>
+         <div class="col-2">
+ <p><h6 style="font-weight:bold">Welcome Mr/Ms: &nbsp;{{request.user}}
+                   Account Number:{{request.user.account_number}}</h6></p>
+
+         </div>
+     </div>
+
+        </div>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+{%extends 'index.html'%}
+{%block body_block%}
+<br><br>
+<div class="container">
+    <div class="row">
+        <div>
+            <div class="card">
+                <h5 class="card-header" style="background-color:#229af0;color:white;font-weight:bold">Credit Transactions</h5>
+                <div class="card-body">
+                    <table class="table table-striped ">
+                        <tr class="bg-warning">
+                            <td>Account Number</td>
+                            <td>Amount Debited</td>
+                            <td>Date</td>
+                            <td>Remarks</td>
+                        </tr>
+                        {%for transaction in ctransactions%}
+                        <tr>
+                            <td>{{transaction.from_account_number}}</td>
+                            <td>{{transaction.amount}}</td>
+                            <td>{{transaction.date}}</td>
+                            <td>{{transaction.notes}}</td>
+                        </tr>
+                        {%endfor%}
+                    </table>
+                </div>
+            </div>
+        </div>
+ </div>
+        </div>
+<br>
+        <div class="container">
+            <div class="row">
+                <div>
+                    <div class="card">
+                        <h5 class="card-header" style="background-color:#229af0;color:white;font-weight:bold">Dedit Transactions</h5>
+                        <div class="card-body">
+                            <table class="table table-striped ">
+                                <tr class="bg-warning">
+                                    <td>Account Number</td>
+                                    <td>Amount Credited</td>
+                                    <td>Date</td>
+                                    <td>Remarks</td>
+                                </tr>
+                                {%for transaction in dtransactions%}
+                                <tr>
+                                    <td>{{transaction.from_account_number}}</td>
+                                    <td>{{transaction.amount}}</td>
+                                    <td>{{transaction.date}}</td>
+                                    <td>{{transaction.notes}}</td>
+                                </tr>
+                                {%endfor%}
+                            </table>
+
+                        </div>
+                    </div>
+
+                        </div>
+                    </div>
+        </div>
+
+                    {%endblock%}
